@@ -5,7 +5,7 @@
 If you want to learn more about MongoDB, visit the following pages:
 
 - [MongoDB Atlas](https://mongodb.com/atlas)
-- [MongoDB Documentation](https://docs.mongodb.com/)
+- [MongoDB Documentation](https://docs.mongodb.com/)  
 
 ## Deploy your own
 
