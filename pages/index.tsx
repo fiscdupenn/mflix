@@ -1,6 +1,7 @@
 import Head from "next/head";
 import clientPromise from "../lib/mongodb";
 import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
+import MoviesList from "../components/MoviesList";
 
 type ConnectionStatus = {
   isConnected: boolean;
@@ -34,6 +35,8 @@ export const getServerSideProps: GetServerSideProps<
 export default function Home({
   isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+
+  
   return (
     <div className="container">
       <Head>
@@ -55,6 +58,9 @@ export default function Home({
           </h2>
         )}
 
+        <div>
+          <MoviesList />
+        </div>
         <p className="description">
           Get started by editing <code>pages/index.js</code>
         </p>
@@ -245,9 +251,12 @@ export default function Home({
             flex-direction: column;
           }
         }
-      `}</style>
+        `}</style>
 
       <style jsx global>{`
+        .movielist-title{
+          color: orange;
+        }
         html,
         body {
           padding: 0;

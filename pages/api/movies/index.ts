@@ -1,4 +1,4 @@
-import clientPromise from "../../lib/mongodb";
+import clientPromise from "../../../lib/mongodb";
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
@@ -9,7 +9,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             .collection("movies")
             .find({})
             .sort({ metacritic: -1 })
-            .limit(1)
+            .limit(10)
             .toArray();
         res.json(movies);
     } catch (e) {
