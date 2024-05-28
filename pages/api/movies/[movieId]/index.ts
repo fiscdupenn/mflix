@@ -16,4 +16,4 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     } catch (e) {
         console.error(e);
     }
-}
+} 
